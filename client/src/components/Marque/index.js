@@ -1,7 +1,6 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 import { TopSeven } from "../../utils/API/coinGecko";
-import Skeleton from '@mui/material/Skeleton';
 
 export const Marque = (props) => {
   const [holder, setHolder] = React.useState([]);

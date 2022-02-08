@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {Button, Stack,TextField} from '@mui/material';
 import {SimpleSearch} from "../../utils/API/coinGecko"
-import { Box } from '@mui/system';
 
 export  function Search() {
   const [formState, setFormState] = React.useState("");

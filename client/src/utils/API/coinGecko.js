@@ -6,7 +6,7 @@ export const SimpleSearch = async (query) => {
   );
 };
 export const CoinsList = async (query) => {
-  const x= await axios.get(
+  await axios.get(
     `https://api.coingecko.com/api/v3/coins/list`
   );
   //console.log(x)

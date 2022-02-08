@@ -1,4 +1,4 @@
-import { styled } from "@mui/material/styles";
+// import { styled } from "@mui/material/styles";
 import { Search } from "../Search";
 const image = "/img/1.png";
 const grass = '/img/back.jpg'

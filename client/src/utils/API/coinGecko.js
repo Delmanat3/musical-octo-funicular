@@ -39,7 +39,7 @@ export const TopSeven = async () => {
     coinId: coin.id,
     name: coin.name,
     images: coin.image.large,
-    links: coin.links.homepage,
+    links: coin.links.homepage[0],
     description: coin.description.en,
     //graphData:coin.market_data.sparkline_7d,
     [Symbol.iterator]() {
@@ -56,7 +56,7 @@ export const TopSeven = async () => {
       };
     },
   }));
-  console.log(descData);
+  // console.log(descData);
   return descData;
 };
 

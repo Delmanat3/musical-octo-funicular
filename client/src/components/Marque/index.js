@@ -1,13 +1,13 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
-import { TopSeven } from "../../utils/API/coinGecko";
+import { Get_Seven } from "../../utils/API/backendless";
 
-export const Marque = (props) => {
+export const Marque = () => {
   const [holder, setHolder] = React.useState([]);
 
   React.useEffect(() => {
     let myPromise = new Promise(function (myResolve, myReject) {
-      const x = TopSeven();
+      const x = Get_Seven();
       if (x) {
         myResolve(x);
       } else {
@@ -24,7 +24,7 @@ export const Marque = (props) => {
       }
     );
   }, []);
-  //  props += holder;
+
   return (
     <>
       <Marquee
@@ -32,6 +32,7 @@ export const Marque = (props) => {
         gradient={false}
         gradientWidth="0px"
         pauseOnHover={true}
+        pauseOnClick={true}
       >
         {holder.map((coin, i) => (
           <span

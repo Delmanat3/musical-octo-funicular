@@ -9,8 +9,9 @@ import { Jumbo } from "../jumbotron";
 import { Link } from "react-router-dom";
 import PatternIcon from "@mui/icons-material/Pattern";
 import PersonAddAltSharpIcon from "@mui/icons-material/PersonAddAltSharp";
-import ShoppingCartSharpIcon from "@mui/icons-material/ShoppingCartSharp";
 import { Marque } from "../Marque/index";
+import MoneyIcon from "@mui/icons-material/Money";
+
 
 export default function Nav() {
   return (
@@ -60,7 +61,7 @@ export default function Nav() {
               </IconButton>
             </Link>
             {/* {Auth.loggedIn() ? ( */}
-            <Link to="/Checkout" underline="none">
+            <Link to="/table" underline="none">
               <IconButton
                 size="large"
                 edge="start"
@@ -68,7 +69,7 @@ export default function Nav() {
                 aria-label="menu"
                 sx={{ mr: 2, fontSize: "14px" }}
               >
-                <ShoppingCartSharpIcon />
+ <MoneyIcon   /> 
               </IconButton>
             </Link>
 

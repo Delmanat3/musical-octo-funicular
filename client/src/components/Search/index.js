@@ -5,15 +5,17 @@ import {Me}from "../../utils/API/backendless"
 export  function Search(props) {
   const [formState, setFormState] = React.useState("");
 
+  
   const handleChange = (event) => {
     const {  value } = event.target;
-    setFormState(value.trim());
+    setFormState(value.trim().toLowerCase())
   };
 const Simp=async(e)=>{
  e.preventDefault();
 try{
   const {data}= await SimpleSearch(formState);
-  console.log(data);
+  setFormState(" ")
+ // console.log(data);
   //props=data
   if(data){
     const itemSave={
@@ -29,11 +31,11 @@ try{
       low24:data.market_data.low_24h.usd,
       priceChange1h:data.market_data.price_change_percentage_1h_in_currency.usd,
     }
-    console.log(itemSave)
+    // console.log(itemSave)
     Me("search", itemSave)
-    window.location.assign("/SearchPage");
+    window.location.replace("/SearchPage");
   }
- setFormState("")
+
   
 }catch(err){
   console.error(err.message)
@@ -41,7 +43,7 @@ try{
 // console.log({props})
 
 }
-  
+
   return (
     <Stack
     id="search"
@@ -53,7 +55,6 @@ try{
       }}
       noValidate
       onSubmit={Simp}
-       autoComplete="Search"
     >
       <TextField
         // hiddenLabel

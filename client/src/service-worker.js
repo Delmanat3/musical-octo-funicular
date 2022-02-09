@@ -22,11 +22,7 @@ clientsClaim();
 // Their URLs are injected into the manifest variable below.
 // This variable must be present somewhere in your service worker file,
 // even if you decide not to use precaching. See https://cra.link/PWA
-// precacheAndRoute([
-//   {url: '/index.html', revision: '383676' },
-//   {url: '/img/grass.jpg', revision: null},
-//   {url: '/img/1.png', revision: null},
-// ]);
+
 precacheAndRoute(self.__WB_MANIFEST);
 
 // Set up App Shell-style routing, so that all navigation requests

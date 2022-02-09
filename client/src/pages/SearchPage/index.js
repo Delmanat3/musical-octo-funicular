@@ -3,7 +3,7 @@ import { getCache } from "../../utils/API/backendless";
 //import Nav from "../../components/Nav"
 import TrendingDownOutlinedIcon from "@mui/icons-material/TrendingDownOutlined";
 import TrendingUpOutlinedIcon from "@mui/icons-material/TrendingUpOutlined";
-import { Divider } from "@mui/material";
+import { Divider, Link } from "@mui/material";
 const image="/img/grass.jpg"
 export const SearchPage = () => {
   const [detail, setDetail] = React.useState([]);
@@ -24,9 +24,15 @@ export const SearchPage = () => {
   return (
     <div id="mainBox" 
     style={{backgroundImage:`url(${image})`,backgroundSize:"cover"}}
-    >
+
+    > <span
+    style={{position:"absolute"}}
+    > <Link
+          href="/"
+          >home</Link></span>
       <div id="marqe">
         <span id="upperContainer">
+        
           <span id="coinName"> {detail.query}</span>
           <span id="coinPrice">Price: ${detail.price}</span>
           {holdy.current===true ? (
@@ -62,17 +68,12 @@ export const SearchPage = () => {
           <div id="detailContent">
             <div
             style={{
-             
               display:"flex",
-             
-
-              //justifyContent:"center"
             }}
             >
               <ul
               style={{ listStyleType: "none"}}
               >
-
                 <li>
                 Creation Date: {detail.gen}
                 </li>

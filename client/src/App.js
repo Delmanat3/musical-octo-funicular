@@ -4,10 +4,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {Login}from "./pages/Login"
 import { SignUp } from "./pages/SignUp";
 import { SearchPage } from "./pages/SearchPage";
+import Row from "./pages/Table/CoinInfo";
 import "./App.css";
 
 function App() {
-  //console.log(props)
+
   return (
     <Router>
       <Routes>
@@ -15,6 +16,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/SearchPage" element={<SearchPage  />} />
+        <Route path="/table" element={<Row  />} />
+
       </Routes>
     </Router>
   );

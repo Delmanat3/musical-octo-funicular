@@ -151,7 +151,7 @@ font-size: larger;
   height: 100%;
   position: relative;
   /* you can change the animation settings from below */
-  animation: slideshow 20s infinite;
+  animation: slideshow 120s infinite;
 }
 /* define width and height for images*/
 .slide {

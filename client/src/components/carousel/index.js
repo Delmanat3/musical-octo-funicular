@@ -52,9 +52,13 @@ export const Carousel = () => {
               <div key={item.words} className="slide">
                 <div
 				key={item.snippet}
-				> <strong>{item.headline}</strong>
+
+				> <small> <p>{item.section}</p></small>
+					 <strong>{item.headline}</strong>
 				<br/>
 				{item.lead_paragraph} </div>
+				
+				<a src={item.url}>full article</a>
               </div>
             ))}
           </div>

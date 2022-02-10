@@ -50,8 +50,8 @@ try{
       component="form"
       sx={{
         width: '40ch',
-        flexDirection:"row"
-
+        flexDirection:"row",
+        marginLeft:"1rem"
       }}
       noValidate
       onSubmit={Simp}

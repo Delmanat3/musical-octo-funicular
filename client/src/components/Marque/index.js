@@ -37,10 +37,6 @@ export const Marque = () => {
         {holder.map((coin, i) => (
           <span
             id="marq"
-            onClick={(e) => {
-              e.preventDefault();
-              alert("coming soon");
-            }}
             key={coin.name}
           >
             <span

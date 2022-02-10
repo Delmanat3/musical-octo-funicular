@@ -47,7 +47,9 @@ export const Carousel = () => {
 				<button className="slide-btn slide-btn-3"></button>
 				<button className="slide-btn slide-btn-4"></button> */}
           {/* <!-- carousel wrapper which contains all images --> */}
-          <div className="slideshow-wrapper">
+          <div className="slideshow-wrapper"
+		  
+		  >
             {holdMe.map((item) => (
               <div key={item.words} className="slide">
                 <div

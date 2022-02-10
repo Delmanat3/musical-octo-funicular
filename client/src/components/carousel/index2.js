@@ -1,43 +1,13 @@
 
-import React from 'react';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import MenuItem from '@material-ui/core/MenuItem';
-import Select from '@material-ui/core/Select';
-import SwipeableViews from 'react-swipeable-views';
-const styles = {
-    tabs: {
-      background: '#fff',
-    },
-    slide: {
-      padding: 15,
-      minHeight: 100,
-      color: '#fff',
-    },
-    slide1: {
-      backgroundColor: '#FEA900',
-    },
-    slide2: {
-      backgroundColor: '#B3DC4A',
-    },
-    slide3: {
-      backgroundColor: '#6AC0FF',
-    },
-  };
 
-export const Carousel=()=>{
 
-const [change,setChange]=React.useState({index:0})
 
-handleChange=(event,value)=>{
 
-    setChange({index:value});
-}
+import React from "react";
+import { GET_NEWS } from "../../utils/API/backendless";
 
-handleChangeIndex=index=>{
-    setChange({index,})
-}
-const [holdMe, setHoldMe] = React.useState([
+export const Carousel = () => {
+  const [holdMe, setHoldMe] = React.useState([
     {
       i: "place",
     },
@@ -63,29 +33,109 @@ const [holdMe, setHoldMe] = React.useState([
       }
     );
   }, []);
-return(
-<div>
- { ()`${ const index=change}`}
-        <Tabs value={index} fullWidth onChange={this.handleChange} style={styles.tabs}>
-          <Tab label="tab n°1" />
-          <Tab label="tab n°2" />
-          <Tab label="tab n°3" />
-        </Tabs>
-        <SwipeableViews index={index} onChangeIndex={this.handleChangeIndex}>
-          <div style={Object.assign({}, styles.slide, styles.slide1)}>slide n°1</div>
-          <div style={Object.assign({}, styles.slide, styles.slide2)}>
-            slide n°2
-            <Select value={10} autoWidth={false}>
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={10}>Ten</MenuItem>
-            </Select>
-          </div>
-          <div style={Object.assign({}, styles.slide, styles.slide3)}>slide n°3</div>
-        </SwipeableViews>
-      </div>
+  console.log(holdMe);
+  return (
 
 
+<section>
+    <div className="container">
+        <div className="carousel">
+            <input type="radio" name="slides" checked="checked" id="slide-1"/>
+            <input type="radio" name="slides" id="slide-2"/>
+            <input type="radio" name="slides" id="slide-3"/>
+            <input type="radio" name="slides" id="slide-4"/>
+            <input type="radio" name="slides" id="slide-5"/>
+            <input type="radio" name="slides" id="slide-6"/>
+            <ul className="carousel__slides">
+                <li className="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="https://picsum.photos/id/1041/800/450" alt=""/>
+                        </div>
+                        <figcaption>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            <span className="credit">Photo: Tim Marshall</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li className="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="https://picsum.photos/id/1043/800/450" alt=""/>
+                        </div>
+                        <figcaption>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            <span className="credit">Photo: Christian Joudrey</span>                            
+                        </figcaption>
+                    </figure>
+                </li>
+                <li className="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="https://picsum.photos/id/1044/800/450" alt=""/>
+                        </div>
+                        <figcaption>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            <span className="credit">Photo: Steve Carter</span>                            
+                        </figcaption>
+                    </figure>
+                </li>
+                <li className="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="https://picsum.photos/id/1045/800/450" alt=""/>
+                        </div>
+                        <figcaption>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            <span className="credit">Photo: Aleksandra Boguslawska</span>                            
+                        </figcaption>
+                    </figure>
+                </li>
+                <li className="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="https://picsum.photos/id/1049/800/450" alt=""/>
+                        </div>
+                        <figcaption>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            <span className="credit">Photo: Rosan Harmens</span>                            
+                        </figcaption>
+                    </figure>
+                </li>
+                <li className="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="https://picsum.photos/id/1052/800/450" alt=""/>
+                        </div>
+                        <figcaption>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            <span className="credit">Photo: Annie Spratt</span>                            
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>    
+            <ul className="carousel__thumbnails">
+                <li>
+                    <label for="slide-1"><img src="https://picsum.photos/id/1041/150/150" alt=""/></label>
+                </li>
+                <li>
+                    <label for="slide-2"><img src="https://picsum.photos/id/1043/150/150" alt=""/></label>
+                </li>
+                <li>
+                    <label for="slide-3"><img src="https://picsum.photos/id/1044/150/150" alt=""/></label>
+                </li>
+                <li>
+                    <label for="slide-4"><img src="https://picsum.photos/id/1045/150/150" alt=""/></label>
+                </li>
+                <li>
+                    <label for="slide-5"><img src="https://picsum.photos/id/1049/150/150" alt=""/></label>
+                </li>
+                <li>
+                    <label for="slide-6"><img src="https://picsum.photos/id/1052/150/150" alt=""/></label>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
 )
 }

@@ -6,6 +6,7 @@ import { SignUp } from "./pages/SignUp";
 import { SearchPage } from "./pages/SearchPage";
 import Row from "./pages/Table/CoinInfo";
 import "./App.css";
+import "./app1.css"
 
 function App() {
 

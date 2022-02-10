@@ -58,7 +58,7 @@ export const Carousel = () => {
 				<br/>
 				{item.lead_paragraph} </div>
 				
-				<a src={item.url}>full article</a>
+				<a href={item.url} >full article</a>
               </div>
             ))}
           </div>

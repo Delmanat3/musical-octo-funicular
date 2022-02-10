@@ -1,6 +1,6 @@
 import React from "react";
 import { Search } from "../Search";
-import { Carousel } from "../carousel/index2";
+import { Carousel } from "../carousel/index";
 const image = "/img/1.png";
 const grass = "/img/back.jpg";
 

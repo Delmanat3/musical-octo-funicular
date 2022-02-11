@@ -31,7 +31,7 @@ export function Login() {
     const resData= await LOGIN_USER(formState);      
       if(resData.status===200){   
        
-        return window.location.assign("/")
+        return window.location.assign("/dash")
        }
     } catch (e) {
       console.log(e.message);

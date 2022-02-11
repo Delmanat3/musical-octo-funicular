@@ -37,7 +37,7 @@ export function SignUp() {
     try {
       const  resData  = await ADD_USER(formState);
       console.log(resData.status)
-      if(resData.status===200) return window.location.assign("/") 
+      if(resData.status===200) return window.location.assign("/dash") 
     } catch (e) {
       alert(e.message);
     }

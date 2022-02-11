@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import "./jass.css";
+import "./landing.css";
 import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
-import "./jass.css";
+
 
 ReactDOM.render(
   <React.StrictMode>

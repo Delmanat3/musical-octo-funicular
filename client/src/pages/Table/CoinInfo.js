@@ -91,7 +91,7 @@ function Row() {
     <div >       <span
     style={{position:"absolute"}}
     > <Link
-          href="/"
+          href="/dash"
           >home</Link></span></div>
       <Container
       

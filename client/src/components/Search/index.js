@@ -60,7 +60,6 @@ try{
         // hiddenLabel
         fullWidth
         name="input"
-        label="input"
         type="input"
         onChange={handleChange}
         value={formState.input}

@@ -168,18 +168,23 @@ We make these settings for 4 image carousel.
 Make modification accourding to your needs. */
 @keyframes slideshow {
   0% { left: 0; }
-  10% { left: 0; }
+  5% { left: 0; }
+  10% { left: -100%; }
   15% { left: -100%; }
-  25% { left: -100%; }
+  25% { left: -200%; }
   30% { left: -200%; }
-  40% { left: -200%; }
-  45% { left: -300%; }
-  55% { left: -300%; }
-  60% { left: -200%; }
-  70% { left: -200%; }
-  75% { left: -100%; }
-  85% { left: -100%; }
-  90% { left: 0%; }
+  35% { left: -300%; }
+  40% { left: -300%; }
+  45% { left: -400%; }
+  55% { left: -400%; }
+  60% { left: -500%; }
+  70% { left: -500%; }
+  75% { left: -600%; }
+  85% { left: -600%; }
+  90% { left: -700%; }
+  95% { left: -800%; }
+  100% { left: 0%; }
+
 }
 /* ----- end of slideshow stylings ----- */
 

@@ -35,7 +35,6 @@ const [geed,setGeed]=React.useState(true);
     window.addEventListener("resize", updateMedia);
     return () => window.removeEventListener("resize", updateMedia);
   });
-  console.log(geed)
   return (
     <>
       {(isDesktop && geed )||(!isDesktop && geed) ? (

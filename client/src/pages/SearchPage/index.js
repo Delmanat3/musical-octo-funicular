@@ -20,7 +20,6 @@ export const SearchPage = () => {
     g();
   }, []);
 
-  console.log(detail);
   return (
     <div id="mainBox" 
     style={{backgroundImage:`url(${image})`,backgroundSize:"cover"}}
@@ -28,7 +27,7 @@ export const SearchPage = () => {
     > <span
     style={{position:"absolute"}}
     > <Link
-          href="/"
+          href="/dash"
           >home</Link></span>
       <div id="marqe">
         <span id="upperContainer">

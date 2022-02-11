@@ -1,7 +1,7 @@
 import React from "react";
 import { Search } from "../Search";
 import { Carousel } from "../carousel/index";
-const image = "/img/1.png";
+const image = "/img/newCity.jpg";
 const grass = "/img/back.jpg";
 
 export const Jumbo = (props) => {

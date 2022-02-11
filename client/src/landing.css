@@ -9,7 +9,7 @@ body {
     transform: translate(-50%, -50%);
     top: 40%;
     left: 50%;
-    width: 85%;
+    width: 85vw;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -18,7 +18,7 @@ body {
   .glitch, .glow {
     color: #dfbfbf;
     position: relative;
-    font-size: 9vw;
+    font-size: 6rem;
     animation: glitch 5s 5s infinite;
   }
   
@@ -247,8 +247,8 @@ body {
   .scanlines::before {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: 0;
     background: repeating-linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.05) 0.5%, transparent 1%);

@@ -106,7 +106,7 @@ export function Login() {
 
             </Grid>
             <Grid item>
-              <Link href="/" variant="body2">
+              <Link href="/dash" variant="body2">
                 {"Home"}
               </Link>
             </Grid>

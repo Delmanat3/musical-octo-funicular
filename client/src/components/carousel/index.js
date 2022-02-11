@@ -29,25 +29,23 @@ export const Carousel = () => {
   }, []);
   return (
     <div className="container">
-      <div className="content"
-      style={{color:"white"}}
-      >
+      <div className="content" style={{ color: "white" }}>
         <div className="slideshow">
-     
-          <div className="slideshow-wrapper"
-		  
-		  >
-            {holdMe.map((item,i) => (
+          <div className="slideshow-wrapper">
+            {holdMe.map((item, i) => (
               <div key={i} className="slide">
-                <div
-				key={item.snippet}
+                <div key={item.snippet}>
+                  {" "}
+                  <small>
+                    {" "}
+                    <p>{item.section}</p>
+                  </small>
+                  <strong>{item.headline}</strong>
+                  <br />
+                  {item.lead_paragraph}{" "}
+                </div>
 
-				> <small> <p>{item.section}</p></small>
-					 <strong>{item.headline}</strong>
-				<br/>
-				{item.lead_paragraph} </div>
-				
-				<a href={item.url} >full article</a>
+                <a href={item.url}>full article</a>
               </div>
             ))}
           </div>

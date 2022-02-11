@@ -6,9 +6,9 @@ import { SignUp } from "./pages/SignUp";
 import { SearchPage } from "./pages/SearchPage";
 import { LandingPage } from "./pages/LandingPage";
 import Row from "./pages/Table/CoinInfo";
+import { Error } from "./pages/Error";
 import "./App.css";
 import "./app1.css"
-
 function App() {
 
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/SearchPage" element={<SearchPage  />} />
         <Route path="/table" element={<Row  />} />
-
+        <Route element={<Error  />} />
       </Routes>
     </Router>
   );

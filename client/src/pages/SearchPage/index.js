@@ -107,7 +107,10 @@ export const SearchPage = () => {
                
             </ul>
             </div>
+         <div style={{paddingTop:"1rem"}}><coingecko-coin-heatmap-widget  height="400" locale="en"></coingecko-coin-heatmap-widget></div>   
+
           </div>
+          
         </div>
       </div>
     </div>

@@ -17,135 +17,123 @@ export default function Nav() {
   const updateMedia = () => {
     setDesktop(window.innerWidth > 1000);
   };
-const [geed,setGeed]=React.useState(true);
+  const [geed, setGeed] = React.useState(true);
   React.useEffect(() => {
-    let myPromise = new Promise(function(myResolve, myReject) {
-        const b=getUser()
+    let myPromise = new Promise(function (myResolve, myReject) {
+      const b = getUser();
 
+      myResolve(b);
+      myReject(console.log("refetch"));
+    });
 
-        myResolve(b); 
-        myReject(console.log("refetch")); 
-      });
-      
-      myPromise.then(
-        function(value) { setGeed(value) },
-        function(error) { console.error(error) }
-      );
-     
+    myPromise.then(
+      function (value) {
+        setGeed(value);
+      },
+      function (error) {
+        console.error(error);
+      }
+    );
+
     window.addEventListener("resize", updateMedia);
     return () => window.removeEventListener("resize", updateMedia);
   });
   return (
     <>
-      {(isDesktop && geed )||(!isDesktop && geed) ? (
-   
+      {(isDesktop && geed) || (!isDesktop && geed) ? (
+        <>
+          <Box sx={{ flexGrow: 1 }}>
+            <AppBar
+              color="transparent"
+              sx={{ backgroundColor: "black", opacity: ".94" }}
+              position="static"
+            >
+              <Toolbar sx={{ justifyContent: "space-between" }}>
+                <Avatar
+                  alt="Cozmos icon"
+                  src="/1copy.png"
+                  sx={{ width: 40, height: 56 }}
+                />
+                <Typography sx={{ color: "white" }}>
+                  Welcome back, {geed.firstName}!
+                </Typography>
 
-   <>
-   <Box sx={{ flexGrow: 1 }}>
-     <AppBar
-       color="transparent"
-       sx={{ backgroundColor: "black", opacity: ".94" }}
-       position="static"
-     >
-       <Toolbar 
-       sx={{ justifyContent: "space-between" }}
-       >
-            <Avatar
-                          alt="Cozmos icon"
-                          src="/1copy.png"
-                          sx={{ width: 40, height: 56 }}
-                        />
-    <Typography
-    sx={{color:"white"}}
-    >
-    Welcome back, {geed.firstName}!
-    </Typography>
+                <Link to="/table" underline="none">
+                  <IconButton
+                    size="large"
+                    edge="start"
+                    color="primary"
+                    aria-label="menu"
+                    sx={{ mr: 2, fontSize: "14px" }}
+                  >
+                    <MoneyIcon />
+                  </IconButton>
+                </Link>
+              </Toolbar>
+            </AppBar>
+            <Marque />
+          </Box>
+          <>
+            <Jumbo />
+          </>
+        </>
+      ) : (
+        <>
+          <Box sx={{ flexGrow: 1 }}>
+            <AppBar
+              color="transparent"
+              sx={{ backgroundColor: "black", opacity: ".94" }}
+              position="static"
+            >
+              <Toolbar sx={{ justifyContent: "space-between" }}>
+                <Avatar
+                  alt="Cozmos icon"
+                  src="/1copy.png"
+                  sx={{ width: 56, height: 56 }}
+                />
 
-         <Link to="/table" underline="none">
-           <IconButton
-             size="large"
-             edge="start"
-             color="primary"
-             aria-label="menu"
-             sx={{ mr: 2, fontSize: "14px" }}
-           >
-             <MoneyIcon />
-           </IconButton>
-         </Link>
-       </Toolbar>
-     </AppBar>
-     <Marque />
-   </Box>
-   <>
-     <Jumbo />
-   </>
- </>
-                ):(
-                  <>
-                  <Box sx={{ flexGrow: 1 }}>
-                    <AppBar
-                      color="transparent"
-                      sx={{ backgroundColor: "black", opacity: ".94" }}
-                      position="static"
-                    >
-                      <Toolbar sx={{ justifyContent: "space-between" }}>
-                        
-                        <Avatar
-                          alt="Cozmos icon"
-                          src="/1copy.png"
-                          sx={{ width: 56, height: 56 }}
-                        />
-            
-                        <Link to="/login" underline="none">
-                          <IconButton
-                            size="large"
-                            edge="start"
-                            color="primary"
-                            aria-label="menu"
-                            sx={{ mr: 2, fontSize: "14px" }}
-                          >
-                            Login <PatternIcon />
-                          </IconButton>
-                        </Link>
-                        <Link to="/Signup" underline="none">
-                          <IconButton
-                            size="large"
-                            edge="start"
-                            color="primary"
-                            aria-label="menu"
-                            sx={{ mr: 2, fontSize: "14px" }}
-                          >
-                            Sign Up <PersonAddAltSharpIcon />
-                          </IconButton>
-                        </Link>
-                        <Link to="/table" underline="none">
-                          <IconButton
-                            size="large"
-                            edge="start"
-                            color="primary"
-                            aria-label="menu"
-                            sx={{ mr: 2, fontSize: "14px" }}
-                          >
-                            <MoneyIcon />
-                          </IconButton>
-                        </Link>
-                      </Toolbar>
-                    </AppBar>
-                    <Marque />
-                  </Box>
-                  <>
-                <Jumbo />
-              </>
-            </>
-                )}
-             </>   
-                 
-
-             
-
-
-
-
-
-      )
-              }
+                <Link to="/login" underline="none">
+                  <IconButton
+                    size="large"
+                    edge="start"
+                    color="primary"
+                    aria-label="menu"
+                    sx={{ mr: 2, fontSize: "14px" }}
+                  >
+                    Login <PatternIcon />
+                  </IconButton>
+                </Link>
+                <Link to="/Signup" underline="none">
+                  <IconButton
+                    size="large"
+                    edge="start"
+                    color="primary"
+                    aria-label="menu"
+                    sx={{ mr: 2, fontSize: "14px" }}
+                  >
+                    Sign Up <PersonAddAltSharpIcon />
+                  </IconButton>
+                </Link>
+                <Link to="/table" underline="none">
+                  <IconButton
+                    size="large"
+                    edge="start"
+                    color="primary"
+                    aria-label="menu"
+                    sx={{ mr: 2, fontSize: "14px" }}
+                  >
+                    <MoneyIcon />
+                  </IconButton>
+                </Link>
+              </Toolbar>
+            </AppBar>
+            <Marque />
+          </Box>
+          <>
+            <Jumbo />
+          </>
+        </>
+      )}
+    </>
+  );
+}

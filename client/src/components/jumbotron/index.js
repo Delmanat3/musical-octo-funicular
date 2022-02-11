@@ -1,6 +1,7 @@
 import React from "react";
 import { Search } from "../Search";
 import { Carousel } from "../carousel/index";
+import { MobileBottom } from "../mobileBottom";
 const image = "/img/newCity.jpg";
 const grass = "/img/back.jpg";
 
@@ -22,21 +23,12 @@ export const Jumbo = (props) => {
       {isDesktop ? (
         <Carousel sx={{ zIndex: "1" }} />
       ) : (
-        <div
-          id="Bg3"
-          style={{
-            backgroundImage: `url(${image})`,
-            minHeight: "300px",
-            backgroundAttachment: "fixed",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            opacity: "0.65",
-          }}
-        ></div>
+        <MobileBottom/>
       )}
 
-      <div id="Bg2" style={{ backgroundImage: `url(${grass})` }}></div>
+      <div id="Bg2" style={{ backgroundImage: `url(${grass})` }}>
+        
+      </div>
     </>
   );
 };

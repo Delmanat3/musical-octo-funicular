@@ -52,7 +52,7 @@ const stayLoggedIn=true
  return await Backendless.UserService.login( login, password, stayLoggedIn )
   .then( function( loggedInUser ) {
     return(
-      window.location.assign("/")
+      window.location.assign("/dash")
     )
   })
   .catch( function( error ) {

@@ -105,7 +105,7 @@ function Row() {
         }}
       >
     
-        <div style={{color:"white", height: 900, width: "55%" }}>
+        <div style={{color:"white", height: 900, width: "55%vw" }}>
           <DataGrid
 
           sx={{color:"white",

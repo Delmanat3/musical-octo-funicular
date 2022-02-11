@@ -14,7 +14,7 @@ body{
   letter-spacing: -7px;
 }
 
-div{
+#div{
   animation: glitch 1s linear infinite;
 }
 
@@ -30,14 +30,14 @@ div{
   }
 }
 
-div:before,
-div:after{
+#div:before,
+#div:after{
   content: attr(title);
   position: absolute;
   left: 0;
 }
 
-div:before{
+#div:before{
   animation: glitchTop 1s linear infinite;
   clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
@@ -55,7 +55,7 @@ div:before{
   }
 }
 
-div:after{
+#div:after{
   animation: glitchBotom 1.5s linear infinite;
   clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
   -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);

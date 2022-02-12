@@ -94,6 +94,18 @@ font-size: larger;
   opacity:.69;
 } */
 
+#mediaMe{
+  color:white;
+   height: 900; 
+   width: 55vw;
+
+}
+@media only screen and (max-width: 800px) {
+  #mediaMe {
+    width:100vw;
+  }
+}
+
 /* ----- container stylings:
 -> centers the whole content of the page
 -> defines width and height for container ----- */

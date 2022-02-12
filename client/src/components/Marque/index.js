@@ -1,10 +1,8 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 import { Get_Seven } from "../../utils/API/backendless";
-
 export const Marque = () => {
   const [holder, setHolder] = React.useState([]);
-
   React.useEffect(() => {
     let myPromise = new Promise(function (myResolve, myReject) {
       const x = Get_Seven();
@@ -20,7 +18,11 @@ export const Marque = () => {
         setHolder(value);
       },
       function (error) {
-        console.log(error);
+        console.log(error.status);
+        if(error.status===401 ){
+         return alert("Please log back in")
+        }
+
       }
     );
   }, []);

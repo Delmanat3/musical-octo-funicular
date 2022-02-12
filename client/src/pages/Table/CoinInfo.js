@@ -105,7 +105,7 @@ function Row() {
         }}
       >
     
-        <div style={{color:"white", height: 900, width: "55%vw" }}>
+        <div id="mediaMe" style={{height: 900 }}>
           <DataGrid
 
           sx={{color:"white",

@@ -19,7 +19,7 @@ export const SearchPage = () => {
 
     g();
   }, []);
-
+console.log(detail)
   return (
     <div id="mainBox" 
     style={{backgroundImage:`url(${image})`,backgroundSize:"cover"}}

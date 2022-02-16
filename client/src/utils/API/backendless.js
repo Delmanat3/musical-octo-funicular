@@ -5,11 +5,6 @@ var APP_ID = '3F38703A-DA8E-8060-FFB6-857C57A93000';
 var API_KEY = 'CD856A9F-DBFB-4F4D-BA6B-CB2D45010057';
 Backendless.initApp(APP_ID, API_KEY);
 
-
-
-
-
-
 export const Get_Seven=async()=>{
 const resData= await Backendless.Data.of( "topseven" ).find()
 return resData

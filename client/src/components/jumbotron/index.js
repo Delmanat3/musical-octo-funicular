@@ -1,7 +1,6 @@
 import React from "react";
 import { Search } from "../Search";
 import { Carousel } from "../carousel/index";
-import { MobileBottom } from "../mobileBottom";
 const image = "/img/newCity.jpg";
 const grass = "/img/back.jpg";
 
@@ -23,8 +22,8 @@ export const Jumbo = (props) => {
       {isDesktop ? (
         <Carousel sx={{ zIndex: "1" }} />
       ) : (
-        <MobileBottom/>
-      )}
+<coingecko-coin-compare-chart-widget  coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" locale="en"></coingecko-coin-compare-chart-widget>
+        )}
 
       <div id="Bg2" style={{ backgroundImage: `url(${grass})` }}>
         
